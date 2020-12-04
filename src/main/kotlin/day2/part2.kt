@@ -8,7 +8,7 @@ fun main() {
             .map(::PasswordEntry)
             .filter(validator::validate)
             .count()
-            .also(::println)
+            .apply(::println)
 }
 
 private fun parseFile(): List<String> {

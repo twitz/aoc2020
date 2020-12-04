@@ -11,11 +11,11 @@ fun main() {
 
 private fun parseFile(): TreeSet<Int> {
     val fileName = "src/main/resources/day1_expense_report.txt"
-    val set = TreeSet<Int>()
-    File(fileName).forEachLine {
-        set.add(it.toInt())
+    return TreeSet<Int>().apply {
+        File(fileName).forEachLine {
+            add(it.toInt())
+        }
     }
-    return set
 }
 
 private fun findValue(tree: TreeSet<Int>): Int {
